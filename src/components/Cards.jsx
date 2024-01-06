@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './Cards.css';
+import Modal from './Modal';
 
 const Cards = () => {
   const [cards, setCards] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [editingCard, setEditingCard] = useState(null);
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,6 +28,23 @@ const Cards = () => {
     fetchData();
   }, []);
 
+  const handleEditClick = (card) => {
+    setEditingCard(card);
+  };
+
+  const handleSaveEdit = (editedCard) => {
+    // Update the cards array with the edited card
+    const updatedCards = cards.map((card) =>
+      card.id === editedCard.id ? editedCard : card
+    );
+    setCards(updatedCards);
+    setEditingCard(null); // Close the modal after saving
+  };
+
+  const handleCancelEdit = () => {
+    setEditingCard(null); // Close the modal without saving
+  };
+  
   const handleDeleteClick = (cardId) => {
     // if (window.confirm('Are you sure you want to delete this card?')) {
       // Filter out the deleted card from the cards array
@@ -68,7 +88,7 @@ const Cards = () => {
               <a href=""><i className="ri-service-fill"></i></a>
             </div>
             <div className="card_tag_container">
-              <a href="#"><i className="ri-edit-fill"></i></a>
+              <a href="#" onClick={() => handleEditClick(card)}><i className="ri-edit-fill"></i></a>
             </div>
             <div className="card_tag_container">
               <a href="#" onClick={() => handleDeleteClick(card.id)}><i className="ri-delete-bin-7-fill"></i></a>
@@ -76,6 +96,15 @@ const Cards = () => {
           </div>
         </div>
       ))}
+
+            {/* Modal for editing */}
+            {editingCard && (
+        <Modal
+          card={editingCard}
+          onSave={handleSaveEdit}
+          onCancel={handleCancelEdit}
+        />
+      )}
     </main>
   );
 };

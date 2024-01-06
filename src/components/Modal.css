@@ -18,11 +18,33 @@
     padding: 2rem;
     position: relative;
 
-    h2 {
+    /* h2 {
         text-align: center;
       }
+      .close-icon {
+        cursor: pointer;
+        font-size: 20px;
+        color: #555;
+      } */
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  /* background-color: #f1f1f1; */
+  /* border-bottom: 1px solid #ddd; */
 }
 
+.modal-header h2 {
+  margin: 0;
+}
+
+.close-icon {
+  cursor: pointer;
+  font-size: 20px;
+  color: #555;
+}
   
   .form-group {
     margin-bottom: 15px;
@@ -74,3 +96,19 @@
   .btn:hover {
     opacity: 0.8;
   }
+
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    margin: 10px 0;
+  }
+  .close-icon {
+  cursor: pointer;
+  font-size: 20px;
+  color: #555;
+  font-size: 1.5rem;
+}
+.button-group {
+  margin-top: 10px;
+}
