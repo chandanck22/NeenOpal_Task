@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       < Cards />
-      < Modal />
+      {/* < Modal /> */}
     </>
   )
 }

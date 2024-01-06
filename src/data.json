@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "phone": "+1-123-456-7890",
+        "website": "https://www.example.com"
+    },
+    {
+        "id": 2,
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "phone": "+1-987-654-3210",
+        "website": "https://www.example.org"
+    },
+    {
+        "id": 3,
+        "name": "Alice Johnson",
+        "email": "alice.johnson@example.com",
+        "phone": "+1-555-123-4567",
+        "website": "https://www.example.net"
+    },
+    {
+        "id": 4,
+        "name": "Bob Williams",
+        "email": "bob.williams@example.com",
+        "phone": "+1-888-999-0000",
+        "website": "https://www.example.io"
+    },
+    {
+        "id": 5,
+        "name": "Emily Davis",
+        "email": "emily.davis@example.com",
+        "phone": "+1-777-222-3333",
+        "website": "https://www.example.co"
+    },
+    {
+        "id": 6,
+        "name": "Michael Brown",
+        "email": "michael.brown@example.com",
+        "phone": "+1-444-555-6666",
+        "website": "https://www.example.dev"
+    },
+    {
+        "id": 7,
+        "name": "Olivia Wilson",
+        "email": "olivia.wilson@example.com",
+        "phone": "+1-222-333-4444",
+        "website": "https://www.example.xyz"
+    },
+    {
+        "id": 8,
+        "name": "William Taylor",
+        "email": "william.taylor@example.com",
+        "phone": "+1-999-888-7777",
+        "website": "https://www.example.info"
+    }
+]
